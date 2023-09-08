@@ -1,19 +1,19 @@
-package com.furkanharmanci.kotlintravelbook
+package com.furkanharmanci.kotlintravelbook.view
 
 import android.Manifest
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
-import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Display.Mode
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.furkanharmanci.kotlintravelbook.R
 import com.furkanharmanci.kotlintravelbook.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
@@ -128,5 +128,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapLon
 
         selectedLatitude = longClick.latitude
         selectedLongitude = longClick.longitude
+    }
+
+    fun save(view: View) {
+
+    }
+    fun delete(view: View) {
+
     }
 }
