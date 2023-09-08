@@ -190,7 +190,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapLon
         startActivity(intent)
     }
     fun delete(view: View) {
-        placeFromMain?.let {
+        placeFromMain.let {
             compositeDisposable.add(
                 placeDao.delete(it)
                     .subscribeOn(Schedulers.io())
